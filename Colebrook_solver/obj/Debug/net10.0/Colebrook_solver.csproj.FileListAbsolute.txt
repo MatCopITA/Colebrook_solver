@@ -1,0 +1,14 @@
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.AssemblyInfoInputs.cache
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.AssemblyInfo.cs
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.csproj.CoreCompileInputs.cache
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\bin\Debug\net10.0\Colebrook_solver.exe
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\bin\Debug\net10.0\Colebrook_solver.deps.json
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\bin\Debug\net10.0\Colebrook_solver.runtimeconfig.json
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\bin\Debug\net10.0\Colebrook_solver.dll
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\bin\Debug\net10.0\Colebrook_solver.pdb
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.dll
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\refint\Colebrook_solver.dll
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.pdb
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.genruntimeconfig.cache
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\ref\Colebrook_solver.dll
