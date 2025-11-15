@@ -4,8 +4,6 @@ class Program
 {
   static void Main(string[] args)
   {
-    Console.Clear();
-
     string title = "\x1b[1m- Solver for Reynolds Number (Re) and Friction Factor (f(Re, K)) -\x1b[0m";
     Console.WriteLine($"{Environment.NewLine}");
     Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (title.Length / 2)) + "}", title));
@@ -40,7 +38,8 @@ class Program
 
     double Re = (rho * v * D) / mu; // Reynolds number
 
-    Console.WriteLine("Reynolds number (Re): " + Re);
+    Console.WriteLine();
+    Console.WriteLine($"{Environment.NewLine}Reynolds number (Re): " + Re);
 
     if (K == 0)
     {
