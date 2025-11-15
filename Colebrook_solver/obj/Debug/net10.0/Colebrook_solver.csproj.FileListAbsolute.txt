@@ -12,3 +12,4 @@ C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\
 C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.pdb
 C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.genruntimeconfig.cache
 C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\ref\Colebrook_solver.dll
+C:\Users\mcope\source\repos\Colebrook_solver\Colebrook_solver\obj\Debug\net10.0\Colebrook_solver.sourcelink.json
