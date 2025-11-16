@@ -19,9 +19,10 @@ class Program
       v_str = "0";
       Console.WriteLine("You need to specify after the volumetric flow rate (m^3/s), press any key to continue...");
       Console.ReadKey();
-    }
-    Console.WriteLine($"{Environment.NewLine}");
 
+      Console.WriteLine($"{Environment.NewLine}");
+    }
+    
     Console.WriteLine("Enter the pipe diameter (m): ");
     string? D_str = Console.ReadLine(); // Diameter in meters
 
@@ -79,6 +80,7 @@ class Program
    
     double Re = (rho * v * D) / mu; // Reynolds number
     double p_drop; // Pressure drop
+    double Pow; // Power
 
     Console.WriteLine();
     Console.WriteLine($"{Environment.NewLine}Reynolds number 'Re': " + Re);
@@ -93,6 +95,9 @@ class Program
         {
           p_drop = (2 * rho * Math.Pow(v, 2) * L) / (D) * (16 / Re);
           Console.WriteLine($"{Environment.NewLine}Pressure Drop '|delta(p)|': " + p_drop + " Pa");
+
+          Pow = p_drop * ((Math.PI * Math.Pow(D, 2)) / 4) * v;
+          Console.WriteLine($"{Environment.NewLine}Power 'P': " + Pow + " W");
         }
         else
         {
@@ -107,6 +112,9 @@ class Program
         {
           p_drop = (2 * rho * Math.Pow(v, 2) * L) / (D) * (0.079 * Math.Pow(Re, -0.25));
           Console.WriteLine($"{Environment.NewLine}Pressure Drop '|delta(p)|': " + p_drop + " Pa");
+
+          Pow = p_drop * ((Math.PI * Math.Pow(D, 2)) / 4) * v;
+          Console.WriteLine($"{Environment.NewLine}Power 'P': " + Pow + " W");
         }
         else
         {
@@ -125,6 +133,9 @@ class Program
         {
           p_drop = (2 * rho * Math.Pow(v, 2) * L) / (D) * (16 / Re);
           Console.WriteLine($"{Environment.NewLine}Pressure Drop '|delta(p)|': " + p_drop + " Pa");
+
+          Pow = p_drop * ((Math.PI * Math.Pow(D, 2)) / 4) * v;
+          Console.WriteLine($"{Environment.NewLine}Power 'P': " + Pow + " W");
         }
         else
         {
@@ -160,6 +171,9 @@ class Program
         {
           p_drop = (2 * rho * Math.Pow(v, 2) * L) / (D) * (f);
           Console.WriteLine($"{Environment.NewLine}Pressure Drop '|delta(p)|': " + p_drop + " Pa");
+
+          Pow = p_drop * ((Math.PI * Math.Pow(D, 2)) / 4) * v;
+          Console.WriteLine($"{Environment.NewLine}Power 'P': " + Pow + " W");
         }
         else
         {
@@ -168,8 +182,14 @@ class Program
       }
     }
 
-    Console.WriteLine($"{Environment.NewLine}Press any key to continue...");
-    Console.ReadKey();
-    Main(args);
+    Console.WriteLine($"{Environment.NewLine}Press any key to continue or press [Esc] to exit...");
+    if (Console.ReadKey().Key == ConsoleKey.Escape)
+    {
+      return;
+    }
+    else 
+    {
+      Main(args);
+    }
   }
 }
