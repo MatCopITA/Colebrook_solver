@@ -1,1 +1,1 @@
-Program to calculate the Reynolds number, Friction Factor, Pression Drop and Power used.
+Program to solve some parameters (Reynolds, pression drop, friction factor, drive force...) in pipe fluid conditions
