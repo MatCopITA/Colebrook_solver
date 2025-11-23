@@ -156,7 +156,7 @@ class Program
 
     // Calculate friction losses
     l_v = f * (L / D) * (Math.Pow(v, 2) / (2 * 9.81));
-    Console.WriteLine($"{Environment.NewLine}Friction Losses 'l_v': " + l_v + " m");
+    Console.WriteLine($"{Environment.NewLine}Friction Losses 'l_v': " + l_v + " m^2/s^2");
 
     // Prompt to continue or exit
     Console.WriteLine($"{Environment.NewLine}Press any key to continue or press [Esc] to exit...");
