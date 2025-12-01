@@ -10,7 +10,7 @@ class Program
     Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (title.Length / 2)) + "}", title));
 
     Console.WriteLine();
-    Console.WriteLine("Enter the fluid velocity (m/s) (if not given leave blank): ");
+    Console.WriteLine("Enter the average fluid velocity (m/s) (if not given leave blank): ");
     string? v_str = Console.ReadLine(); // Velocity in m/s
 
     //if velocity is not given, set to 0
@@ -59,7 +59,7 @@ class Program
     // Convert inputs to double
     double v = Convert.ToDouble(v_str);
     double D = Convert.ToDouble(D_str);
-    double K = Convert.ToDouble(K_str);
+    double K_micro = Convert.ToDouble(K_str);
     double rho = Convert.ToDouble(rho_str);
     double mu = Convert.ToDouble(mu_str);
     double L = Convert.ToDouble(L_str);
@@ -78,7 +78,7 @@ class Program
       Console.WriteLine($"{Environment.NewLine}Calculated fluid velocity 'v': " + v + " m/s");
     }
 
-    K = K * Math.Pow(10, -6); // Convert roughness from μm to m
+    double K = K_micro * Math.Pow(10, -6); // Convert roughness from μm to m
 
     double Re = (rho * v * D) / mu; // Reynolds number
     double p_drop; // Pressure drop
@@ -86,6 +86,7 @@ class Program
     double f; // Friction factor
     double F_drv; //drive force
     double l_v; //friction losses
+    double tau_w; //shear stress at the pipe wall
 
     Console.WriteLine();
     Console.WriteLine($"{Environment.NewLine}Reynolds number 'Re': " + Re);
@@ -140,7 +141,7 @@ class Program
     // Calculate pressure drop and power used
     if (L != 0)
     {
-      p_drop = (2 * rho * Math.Pow(v, 2) * L) / (D) * (f);
+      p_drop = (2 * rho * Math.Pow(v, 2)) * (L / D) * (f);
       Console.WriteLine($"{Environment.NewLine}Pressure Drop '|delta(p)|': " + p_drop + " Pa");
 
       Pow = p_drop * ((Math.PI * Math.Pow(D, 2)) / 4) * v;
@@ -159,7 +160,11 @@ class Program
     l_v = f * (L / D) * (Math.Pow(v, 2) / (2 * 9.81));
     Console.WriteLine($"{Environment.NewLine}Friction Losses 'l_v': " + l_v + " m^2/s^2");
 
-    // Prompt to continue or exit
+    // Shear stress at the pipe wall
+    tau_w = (f * rho * Math.Pow(v, 2)) / 8;
+    Console.WriteLine($"{Environment.NewLine}Shear Stress at the Pipe Wall 'tau_w': " + tau_w + " Pa");
+
+    // Prompt to reset or exit
     Console.WriteLine($"{Environment.NewLine}Press any key to continue or press [Esc] to exit...");
     if (Console.ReadKey().Key == ConsoleKey.Escape)
     {
